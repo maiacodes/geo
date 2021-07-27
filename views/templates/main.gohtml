@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>IP-Geo</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+</head>
+
+<body>
+<div class="section">
+    <div class="container">
+        <div class="box">
+            <div class="has-text-centered">
+                <h1 class="title"><a href="/">IP-Geo</a></h1>
+                <p class="subtitle">Enter an IP below to get information such as geolocation and owner.</p>
+                <div class="field has-addons is-fullwidth">
+                    <div class="control is-expanded">
+                        <input onkeydown="if (event.keyCode === 13) { window.location = '/' + document.getElementById('ip').value }" id="ip" class="input is-rounded is-large" type="text" placeholder="Enter an IP or domain here">
+                    </div>
+                    <div class="control">
+                        <button onclick="window.location = '/' + document.getElementById('ip').value" class="button is-primary is-rounded is-large">
+                            Search
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="box">
+            {{embed}}
+        </div>
+    </div>
+</div>
+</body>
+
+</html>

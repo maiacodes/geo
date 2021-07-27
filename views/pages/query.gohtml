@@ -1,0 +1,11 @@
+<p class="title">Lookup of {{ .IP }}</p>
+
+<p class="has-text-weight-bold is-underlined">IP Geolocation</p>
+<p class="is-italic">This is a guess of the location of this IP based on it's history.</p>
+<div class="mt-1"><code>{{ .Info.City }}, {{ .Info.Country }}</code> - <a target="_blank" href="https://www.google.com/maps/@{{ .Info.Lat }},{{ .Info.Long }},15z">Visit on Google Maps</a></div>
+
+<br>
+
+<p class="has-text-weight-bold is-underlined">ISP Details</p>
+<p class="is-italic">This is who this IP was originally assigned to, typically an ISP or other provider.</p>
+<div class="mt-1"><code>{{ .Info.ISP }} (<a target="_blank" href="https://bgp.he.net/{{ .Info.ASN }}">{{ .Info.ASN }}</a>)</code></div>
