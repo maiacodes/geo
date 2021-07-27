@@ -36,6 +36,7 @@ func main() {
 		if ip == nil {
 			n, err := net.LookupIP(query)
 			if err != nil || len(n) == 0 {
+				c.Status(404)
 				return c.Render("pages/error", fiber.Map{
 					"IP": query,
 				}, "templates/main")
