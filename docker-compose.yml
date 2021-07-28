@@ -1,0 +1,11 @@
+version: "3"
+
+services:
+  geo:
+    container_name: geo
+    build: .
+    restart: always
+    ports:
+      - "${PORT}:${PORT}"
+    volumes:
+      - /usr/share/GeoIP:/usr/share/GeoIP
